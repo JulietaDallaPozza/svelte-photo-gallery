@@ -80,6 +80,6 @@ Styled search input and fetch button
 🧱 Additional Layout
 Imported a custom Header component
 
-Wrapped layout with a global app structure (<main>, <footer>)
+Wrapped layout with a global app structure (main footer )
 
 Footer includes a link to SvelteKit docs
