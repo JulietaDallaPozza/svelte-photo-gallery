@@ -1,38 +1,85 @@
-# sv
+✨ Summary
+This is a casual photo search app built in Svelte. It shows how to use:
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Svelte's lifecycle hooks
 
-## Creating a project
+Transitions for visual polish
 
-If you're seeing this, you've probably already done this step. Congrats!
+API integration with a reactive interface
 
-```bash
-# create a new project in the current directory
-npx sv create
 
-# create a new project in my-app
-npx sv create my-app
-```
+📦 Features
+Reactive input for search queries
 
-## Developing
+Unsplash API integration
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Animated photo transitions (fly and fade)
 
-```bash
-npm run dev
+Svelte lifecycle logging (onMount, onDestroy, etc.)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Clean layout with simple responsive styling
 
-## Building
+🔧 Imports and Setup
+Lifecycle Hooks:
 
-To create a production version of your app:
+onMount, onDestroy, beforeUpdate, afterUpdate from Svelte
 
-```bash
-npm run build
-```
+Transitions:
 
-You can preview the production build with `npm run preview`.
+fade, fly from svelte/transition
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Variables:
+
+search_term: stores user input
+
+photos: stores API response (photo list)
+
+🔄 Lifecycle Hooks (Logging Only)
+onMount: Fires once on component load → fetches default photos
+
+onDestroy: Fires when the component is destroyed → logs a message
+
+beforeUpdate: Fires before any DOM update → logs a message
+
+afterUpdate: Fires after the DOM updates → logs a message
+
+🌐 Data Fetching
+fetchData():
+
+Fetches from Unsplash using search_term (or defaults to "animals")
+
+Updates the photos array with the results
+
+🧑‍💻 User Interaction
+handleFetch():
+
+Triggered by button click
+
+Calls fetchData() using the current search term
+
+Clears the search input after fetching
+
+🖼️ Rendering & Transitions
+A search bar and button for user input
+
+Image results rendered using {#each}
+
+Each image:
+
+Slides in (fly) with a staggered delay
+
+Fades out (fade) on removal
+
+🎨 Styling
+Simple layout using flexbox
+
+Responsive grid for images
+
+Styled search input and fetch button
+
+🧱 Additional Layout
+Imported a custom Header component
+
+Wrapped layout with a global app structure (<main>, <footer>)
+
+Footer includes a link to SvelteKit docs
