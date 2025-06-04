@@ -1,4 +1,4 @@
-✨ Summary
+# ✨ Summary
 This is a casual photo search app built in Svelte. It shows how to use:
 
 Svelte's lifecycle hooks
@@ -8,7 +8,7 @@ Transitions for visual polish
 API integration with a reactive interface
 
 
-📦 Features
+# 📦 Features
 Reactive input for search queries
 
 Unsplash API integration
@@ -19,7 +19,7 @@ Svelte lifecycle logging (onMount, onDestroy, etc.)
 
 Clean layout with simple responsive styling
 
-🔧 Imports and Setup
+# 🔧 Imports and Setup
 Lifecycle Hooks:
 
 onMount, onDestroy, beforeUpdate, afterUpdate from Svelte
@@ -34,7 +34,7 @@ search_term: stores user input
 
 photos: stores API response (photo list)
 
-🔄 Lifecycle Hooks (Logging Only)
+# 🔄 Lifecycle Hooks (Logging Only)
 onMount: Fires once on component load → fetches default photos
 
 onDestroy: Fires when the component is destroyed → logs a message
@@ -43,14 +43,14 @@ beforeUpdate: Fires before any DOM update → logs a message
 
 afterUpdate: Fires after the DOM updates → logs a message
 
-🌐 Data Fetching
+# 🌐 Data Fetching
 fetchData():
 
 Fetches from Unsplash using search_term (or defaults to "animals")
 
 Updates the photos array with the results
 
-🧑‍💻 User Interaction
+# 🧑‍💻 User Interaction
 handleFetch():
 
 Triggered by button click
@@ -59,7 +59,7 @@ Calls fetchData() using the current search term
 
 Clears the search input after fetching
 
-🖼️ Rendering & Transitions
+# 🖼️ Rendering & Transitions
 A search bar and button for user input
 
 Image results rendered using {#each}
@@ -70,14 +70,14 @@ Slides in (fly) with a staggered delay
 
 Fades out (fade) on removal
 
-🎨 Styling
+# 🎨 Styling
 Simple layout using flexbox
 
 Responsive grid for images
 
 Styled search input and fetch button
 
-🧱 Additional Layout
+# 🧱 Additional Layout
 Imported a custom Header component
 
 Wrapped layout with a global app structure (main footer )
